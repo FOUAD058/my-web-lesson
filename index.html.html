@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعليم صناعة صفحة ويب</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;600&display=swap');
+
+        /* الخلفية الساحرة التي تتغير ببطء شديد */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #121212, #2c3e50, #4b0082, #000000);
+            background-size: 400% 400%;
+            animation: softFlow 25s ease infinite;
+            font-family: 'Cairo', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        @keyframes softFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* الحاوية بتصميم زجاجي فاخر */
+        .content-box {
+            max-width: 850px;
+            margin: 40px 20px;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+            text-align: center;
+            position: relative;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Aref Ruqaa', serif;
+            font-size: 3.5em;
+            color: #f1c40f;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+        }
+
+        p {
+            font-size: 1.45em;
+            line-height: 2.3;
+            text-align: justify;
+            color: #ecf0f1;
+            margin-bottom: 30px;
+            text-indent: 30px;
+        }
+
+        .highlight {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        /* زر الطباعة بلمسة ذهبية */
+        .btn-print {
+            background: transparent;
+            color: #f1c40f;
+            border: 2px solid #f1c40f;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: 0.4s;
+            margin-bottom: 20px;
+        }
+
+        .btn-print:hover {
+            background: #f1c40f;
+            color: #000;
+            box-shadow: 0 0 30px rgba(241, 196, 15, 0.6);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            opacity: 0.5;
+        }
+
+        @media print {
+            .btn-print { display: none; }
+            body { background: white; color: black; }
+            .content-box { border: none; box-shadow: none; background: white; backdrop-filter: none; }
+            h1, p { color: black !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-box">
+        <button class="btn-print" onclick="window.print()">طباعة الدرس 🖨️</button>
+        
+        <h1>تعليم صناعة صفحة ويب</h1>
+
+        <p>
+            تعد <span class="highlight">صناعة صفحات الويب</span> هي اللغة الفنية الجديدة في عصرنا الرقمي، حيث تبدأ الرحلة بتعلم لغة <span class="highlight">HTML</span> التي تمثل الهيكل العظمي والأساس المتين لكل موقع؛ فهي التي تحدد العناصر والفقرات والعناوين، تماماً كما تُرسم المخططات الهندسية بدقة. وبدون هذا الهيكل، لا يمكن لأي جمال بصري أن يظهر بوضوح، فهي اللغة التي تمنح الصفحة معناها ومنطقها أمام المتصفحات، محولةً الأكواد البسيطة إلى محتوى مرئي يربط المعلومة بالمشاهد في تناغم هندسي رائع.
+        </p>
+
+        <p>
+            وبعد وضع الهيكل، تأتي لغة <span class="highlight">CSS</span> لتكون هي ريشة الرسام التي تلون هذا البناء وتمنحه روحه الجمالية الفريدة، حيث نتحكم من خلالها في الألوان، وتوزيع المساحات، وتنسيق الخطوط، وحركات العناصر الانسيابية. المصمم المبدع هو من يعرف كيف يوازن بين برودة البرمجة وحرارة الفن، ليخلق تجربة بصرية مريحة وجذابة، مما يجعل تصفح الصفحة رحلة ممتعة، حيث كل زاوية وكل لون تم اختياره بعناية لخدمة الشكل والوظيفة في آن واحد.
+        </p>
+
+        <p>
+            أما اللمسة الختامية التي تجعل الصفحة تنبض بالحياة فهي لغة <span class="highlight">JavaScript</span>، وهي بمثابة العقل المفكر الذي يضيف التفاعل والذكاء للموقع. بفضلها، تصبح الصفحة قادرة على الاستجابة للمستخدم، وتغيير محتواها في لحظات، وإضافة تأثيرات حركية تجعل التجربة الرقمية أكثر حيوية. إن إتقان هذه الأساسيات الثلاثة هو السر الحقيقي وراء صناعة صفحات ويب احترافية تجمع بين قوة التأسيس، وسحر التصميم، وذكاء التفاعل، لتكون شاهداً على إبداعك في عالم البرمجيات.
+        </p>
+
+        <footer>
+            دليل تعليم البرمجة - صُمم بكل ود ليرافقك في رحلة التعلم.
+        </footer>
+    </div>
+
+</body>
+</html>
